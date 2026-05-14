@@ -52,17 +52,13 @@ const SPRING = { type: 'spring', stiffness: 260, damping: 30 };
 // ── RESIKU.ONLINE brand glyph ─────────────────────────────────────────────────────
 function ResikuMark({ size = 32 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" style={{ flexShrink: 0 }}>
-      <rect width="32" height="32" rx="3" fill={C.ink} />
-      <rect x="5"  y="6"  width="9"  height="3"   fill="#fff" />
-      <rect x="16" y="6"  width="11" height="2"   fill="#fff" opacity=".5" />
-      <rect x="5"  y="11" width="22" height="1.5" fill="#fff" opacity=".45" />
-      <rect x="5"  y="14" width="22" height="1.5" fill="#fff" opacity=".45" />
-      <rect x="5"  y="17" width="18" height="1.5" fill="#fff" opacity=".45" />
-      <rect x="5"  y="22" width="6"  height="5"   fill="#fff" />
-      <rect x="12" y="22" width="6"  height="5"   fill="#fff" opacity=".7" />
-      <rect x="19" y="22" width="6"  height="5"   fill="#fff" opacity=".7" />
-    </svg>
+    <img
+      src="/logo.jpg"
+      alt="Resiku"
+      width={size}
+      height={size}
+      style={{ width: size, height: size, objectFit: 'contain', flexShrink: 0, display: 'block' }}
+    />
   );
 }
 
