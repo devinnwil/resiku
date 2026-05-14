@@ -1085,7 +1085,7 @@ function PreviewFrame({ template, fields, date, exportRef }) {
         pointerEvents: 'none',
         zIndex: -1,
       }}>
-        <div ref={exportRef} style={{ width: BW, height: BH, backgroundColor: '#fff', overflow: 'hidden' }}>
+        <div ref={exportRef} style={{ width: BW, minHeight: BH, backgroundColor: '#fff' }}>
           <Label fields={fields} date={date} />
         </div>
       </div>
@@ -1434,10 +1434,15 @@ function FormPreview({ template, onBack }) {
         backgroundColor: '#ffffff',
         useCORS: true,
         logging: false,
+        windowHeight: el.scrollHeight, // capture full natural height (incl. overflow)
+        height: el.scrollHeight,
       });
       const imgData = canvas.toDataURL('image/jpeg', 0.95);
 
-      const [pageW, pageH] = T[template].pageMm;
+      // Page width stays at template's A6 width (105mm); height grows
+      // proportionally with the captured canvas so nothing gets clipped.
+      const pageW = T[template].pageMm[0];
+      const pageH = pageW * (canvas.height / canvas.width);
       const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: [pageW, pageH] });
       pdf.addImage(imgData, 'JPEG', 0, 0, pageW, pageH);
 
