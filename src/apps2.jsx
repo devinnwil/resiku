@@ -126,7 +126,7 @@ function FormField({ label, field, onChange, type = 'text', placeholder, options
     fontSize: 13,
     fontFamily: FONT,
     border: `1px solid ${C.border}`,
-    borderRadius: 4,
+    borderRadius: 0,
     outline: 'none',
     backgroundColor: enabled ? '#fff' : '#f6f6f6',
     color: enabled ? C.ink : '#aaa',
@@ -1131,7 +1131,7 @@ function MainMenu({ onStart }) {
               whileTap={{ scale: 0.98 }}
               whileHover={{ y: -1 }}
               transition={{ duration: 0.15 }}
-              style={{ width: '100%', height: 48, backgroundColor: C.ink, color: '#fff', border: 'none', borderRadius: 4, fontFamily: FONT, fontSize: 13, fontWeight: 800, cursor: 'pointer' }}>
+              style={{ width: '100%', height: 48, backgroundColor: C.ink, color: '#fff', border: 'none', borderRadius: 0, fontFamily: FONT, fontSize: 13, fontWeight: 800, cursor: 'pointer' }}>
               Mulai Sekarang
             </motion.button>
           </div>
@@ -1181,7 +1181,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
                 style={{
                   flex: 1, position: 'relative', padding: 12, backgroundColor: '#fff',
                   border: selected ? `2px solid ${C.ink}` : `1px solid ${C.border}`,
-                  borderRadius: 3, cursor: 'zoom-in', fontFamily: FONT, outline: 'none',
+                  borderRadius: 0, cursor: 'zoom-in', fontFamily: FONT, outline: 'none',
                 }}
               >
                 <TemplateThumb variant={t.id} />
@@ -1190,7 +1190,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
                   position: 'absolute', top: 12, right: 12,
                   width: 26, height: 26,
                   backgroundColor: 'rgba(17,17,17,0.82)',
-                  borderRadius: '50%',
+                  borderRadius: 0,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   pointerEvents: 'none',
                   boxShadow: '0 1px 3px rgba(0,0,0,0.25)',
@@ -1237,7 +1237,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
                   style={{
                     flex: 1, height: 50,
                     border: `1px solid ${selected ? C.ink : C.border}`,
-                    borderRadius: 3, fontFamily: FONT, fontSize: 14, fontWeight: 800, cursor: 'pointer', outline: 'none',
+                    borderRadius: 0, fontFamily: FONT, fontSize: 14, fontWeight: 800, cursor: 'pointer', outline: 'none',
                   }}>
                   {t.label}
                 </motion.button>
@@ -1252,7 +1252,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
                 backgroundColor: '#fff',
                 color: C.ink,
                 border: `1px solid ${C.border}`,
-                borderRadius: 3, fontFamily: FONT, fontSize: 14, fontWeight: 800,
+                borderRadius: 0, fontFamily: FONT, fontSize: 14, fontWeight: 800,
                 cursor: 'pointer', outline: 'none',
               }}>
               Kembali
@@ -1267,7 +1267,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
               transition={{ duration: 0.18 }}
               style={{
                 flex: 1, height: 56,
-                border: 'none', borderRadius: 3, fontFamily: FONT, fontSize: 14, fontWeight: 800,
+                border: 'none', borderRadius: 0, fontFamily: FONT, fontSize: 14, fontWeight: 800,
                 cursor: template ? 'pointer' : 'not-allowed', outline: 'none',
               }}>
               Selanjutnya
@@ -1301,7 +1301,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
               transition={SPRING}
               onClick={(e) => e.stopPropagation()}
               style={{
-                backgroundColor: '#fff', borderRadius: 6, padding: 24,
+                backgroundColor: '#fff', borderRadius: 0, padding: 24,
                 width: '100%', maxWidth: 540, maxHeight: '92vh',
                 display: 'flex', flexDirection: 'column', gap: 16,
                 boxShadow: '0 20px 60px rgba(0,0,0,0.35)',
@@ -1320,7 +1320,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
                   whileTap={{ scale: 0.9 }}
                   whileHover={{ backgroundColor: '#e6e6e6' }}
                   style={{
-                    width: 28, height: 28, borderRadius: '50%', border: 'none',
+                    width: 28, height: 28, borderRadius: 0, border: 'none',
                     backgroundColor: '#f1f1f1', color: C.ink, fontSize: 13,
                     cursor: 'pointer', display: 'flex', alignItems: 'center',
                     justifyContent: 'center', padding: 0,
@@ -1329,7 +1329,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
               <div style={{
                 flex: 1, minHeight: 0,
                 backgroundColor: '#fafafa',
-                border: `1px solid ${C.border}`, borderRadius: 4,
+                border: `1px solid ${C.border}`, borderRadius: 0,
                 padding: 16, display: 'flex',
                 justifyContent: 'center', alignItems: 'center', overflow: 'auto',
               }}>
@@ -1349,7 +1349,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
                   whileTap={{ scale: 0.97 }}
                   style={{
                     flex: 1, height: 44, backgroundColor: '#fff', color: C.muted,
-                    border: `1px solid ${C.border}`, borderRadius: 4,
+                    border: `1px solid ${C.border}`, borderRadius: 0,
                     fontFamily: FONT, fontSize: 13, fontWeight: 800,
                     cursor: 'pointer', outline: 'none',
                   }}>
@@ -1365,7 +1365,7 @@ function SelectTemplate({ template, onSelect, onNext, onBack }) {
                     flex: 1.4, height: 44,
                     backgroundColor: previewId === template ? '#d8d8d8' : C.ink,
                     color: previewId === template ? '#fafafa' : '#fff',
-                    border: 'none', borderRadius: 4,
+                    border: 'none', borderRadius: 0,
                     fontFamily: FONT, fontSize: 13, fontWeight: 800,
                     cursor: previewId === template ? 'not-allowed' : 'pointer',
                     outline: 'none',
@@ -1468,7 +1468,7 @@ function FormPreview({ template, onBack }) {
         flex: 1,
         backgroundColor: '#fff',
         border: `1px solid ${C.border}`,
-        borderRadius: 6,
+        borderRadius: 0,
         padding: 20,
         display: 'flex',
         flexDirection: 'column',
@@ -1550,7 +1550,7 @@ function FormPreview({ template, onBack }) {
           flex: 1,
           backgroundColor: '#fff',
           border: `1px solid ${C.border}`,
-          borderRadius: 6,
+          borderRadius: 0,
           padding: 18,
           display: 'flex',
           justifyContent: 'center',
@@ -1564,14 +1564,14 @@ function FormPreview({ template, onBack }) {
         <div style={{ display: 'flex', gap: 10, flexShrink: 0 }}>
           <motion.button onClick={onBack}
             whileTap={{ scale: 0.98 }}
-            style={{ flex: 1, height: 48, backgroundColor: '#fff', color: C.muted, border: `1px solid ${C.border}`, borderRadius: 4, fontFamily: FONT, fontSize: 13, fontWeight: 800, cursor: 'pointer', outline: 'none' }}>
+            style={{ flex: 1, height: 48, backgroundColor: '#fff', color: C.muted, border: `1px solid ${C.border}`, borderRadius: 0, fontFamily: FONT, fontSize: 13, fontWeight: 800, cursor: 'pointer', outline: 'none' }}>
             Kembali
           </motion.button>
           <motion.button onClick={handleDownload} disabled={downloading}
             whileTap={downloading ? {} : { scale: 0.98 }}
             whileHover={downloading ? {} : { y: -1 }}
             transition={{ duration: 0.15 }}
-            style={{ flex: 1.4, height: 48, backgroundColor: C.ink, color: '#fff', border: 'none', borderRadius: 4, fontFamily: FONT, fontSize: 13, fontWeight: 800, cursor: downloading ? 'wait' : 'pointer', outline: 'none', opacity: downloading ? 0.7 : 1 }}>
+            style={{ flex: 1.4, height: 48, backgroundColor: C.ink, color: '#fff', border: 'none', borderRadius: 0, fontFamily: FONT, fontSize: 13, fontWeight: 800, cursor: downloading ? 'wait' : 'pointer', outline: 'none', opacity: downloading ? 0.7 : 1 }}>
             <AnimatePresence mode="wait" initial={false}>
               <motion.span
                 key={downloading ? 'loading' : 'idle'}

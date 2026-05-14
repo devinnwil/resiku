@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 *, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; overflow: hidden; overscroll-behavior: none; }
+html, body {
+  margin: 0; padding: 0; overflow: hidden; overscroll-behavior: none;
+  font-family: 'Mulish', system-ui, sans-serif;
+}
+button, input, select, textarea, optgroup { font-family: inherit; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 
 :root {
